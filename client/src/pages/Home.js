@@ -15,29 +15,9 @@ export const Home = () => {
       <header className='header'>
         {/* card */}
         <div className='section-center initial-section'>
-          {/* <div className='headline'>
-            <h1>
-              <span style={{ color: 'white', fontStyle: 'italic' }}>
-                piano{' '}
-              </span>
-              lessons for
-              <span className='alt-text' style={{ color: '#f98598' }}>
-                {' '}
-                ALL{' '}
-              </span>
-              levels!
-            </h1>
-          </div> */}
           <div className='flex-center'>
             <div className='banner'>
               <div className='banner-text'>
-                {/* <h1>
-                  <span style={{ color: 'white', fontStyle: 'italic' }}>
-                    piano lessons
-                  </span>
-                  <br />
-                  <span>for ALL levels!</span>
-                </h1> */}
                 <div className='logo-container'>
                   <img src={logo} alt='logo' />
                 </div>
@@ -79,13 +59,11 @@ export const Home = () => {
           </div>
           <div className='hero-btn-container'>
             <div className='hero-btn-text'>explore</div>
-            <a className='hero-btn' href='#overview'>
-              <FaArrowDown />
-              {/* <i className='fa-solid fa-arrow-down'></i> */}
-            </a>
-            {/* <button className='hero-btn'>
-              <i className='fa-solid fa-arrow-down'></i>
-            </button> */}
+            <div className='temp-container'>
+              <a className='hero-btn' href='#overview'>
+                <FaArrowDown />
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -94,7 +72,7 @@ export const Home = () => {
       {/* OVERVIEW BEGIN */}
       <section id='overview' className='overview section-pink'>
         <div className='section-center'>
-          <h1 className='section-title'>a brief overview</h1>
+          <h1 className='section-title'>overview</h1>
           <div className='flex-container'>
             <div className='section-text'>
               <h2>Olga Berkovich</h2>
