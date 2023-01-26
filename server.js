@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router()
+// const router = express.Router()
 const cors = require('cors')
 const nodemailer = require('nodemailer')
 const PORT = process.env.PORT || 5000
@@ -8,7 +8,8 @@ const app = express()
 require('dotenv').config()
 // when ready to deploy (after build)
 // !!!
-// app.use(express.static(path.resolve(__dirname, './client/build')))
+app.use(express.static(path.resolve(__dirname, './client/build')))
+
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 // })
@@ -131,8 +132,8 @@ app.post('/send', function (req, res) {
 
 // !!!
 // only when ready to deploy
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
+})
 
 app.listen(PORT, () => console.log(`Server Running on port ${PORT}`))
