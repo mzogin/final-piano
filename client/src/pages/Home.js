@@ -1,7 +1,7 @@
 import React from 'react'
 
 import image from '../assets/images/profile.png'
-import logo from '../assets/images/logo/logo.png'
+import logo from '../assets/images/logo/logo.svg'
 
 import { Carousel } from '../components/Carousel'
 import { accordionData } from '../utils'
@@ -16,7 +16,7 @@ export const Home = () => {
         {/* card */}
         <div className='section-center initial-section'>
           <div className='flex-center'>
-            <div className='banner'>
+            <div>
               <div className='banner-text'>
                 <div className='logo-container'>
                   <img src={logo} alt='logo' />

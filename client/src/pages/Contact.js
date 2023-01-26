@@ -91,7 +91,12 @@ export const Contact = () => {
                 <h4 className='contact-text'>oglayas@gmail.com</h4>
               </div>
               <div className='btn-container'>
-                <a href='skills.html' className='btn banner-btn facebook-btn'>
+                <a
+                  href='https://www.facebook.com/oglayas1/'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='btn banner-btn facebook-btn'
+                >
                   <FaFacebook style={{ marginRight: '1rem' }} />
                   facebook
                 </a>

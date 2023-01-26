@@ -16,6 +16,7 @@ export const Videos = () => {
     'https://www.youtube.com/embed/EfsQbXHkEEM',
     'https://www.youtube.com/embed/PI82mGt2qm8',
     'https://www.youtube.com/embed/-RCOjJ9At2o',
+    'https://www.youtube.com/embed/-RCOjJ9At2o',
   ]
   // const { loading, videos } = useGlobalContext()
   // if (loading) {
@@ -34,7 +35,12 @@ export const Videos = () => {
     <section className='videos-section'>
       <div className='section-center initial-section'>
         <div className='btn-container'>
-          <a href='youtube.com' className='btn banner-btn youtube-btn'>
+          <a
+            href='https://www.youtube.com/channel/UCzb3-4iGZDOQooVYAcYsZdg'
+            target='_blank'
+            rel='noreferrer'
+            className='btn banner-btn youtube-btn'
+          >
             {/* <i className='fa-brands fa-youtube'></i> */}
             <FaYoutube style={{ marginRight: '1rem' }} />
             youtube
