@@ -12,7 +12,6 @@ import { FaArrowDown } from 'react-icons/fa'
 export const Home = () => {
   return (
     <>
-      <div className='bg'></div>
       {/* header */}
       <header className='header'>
         {/* card */}
