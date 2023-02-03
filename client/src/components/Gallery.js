@@ -18,24 +18,11 @@ export const Gallery = ({ galleryImages }) => {
   const handleCloseModal = () => {
     setOpenModal(false)
   }
-  // const handlePrevSlide = () => {
-  //   slideNumber === 0
-  //     ? setSlideNumber(galleryImages.length - 1)
-  //     : setSlideNumber(slideNumber - 1)
-  // }
-
   const handlePrevSlide = useCallback(() => {
     slideNumber === 0
       ? setSlideNumber(galleryImages.length - 1)
       : setSlideNumber(slideNumber - 1)
   }, [slideNumber, galleryImages.length])
-
-  // const handleNextSlide = () => {
-  //   console.log(slideNumber)
-  //   slideNumber === galleryImages.length - 1
-  //     ? setSlideNumber(0)
-  //     : setSlideNumber(slideNumber + 1)
-  // }
 
   const handleNextSlide = useCallback(() => {
     slideNumber === galleryImages.length - 1
@@ -44,7 +31,7 @@ export const Gallery = ({ galleryImages }) => {
   }, [slideNumber, galleryImages.length])
 
   const onTouchStart = (e) => {
-    setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+    setTouchEnd(null) // otherwise swipe is fired even with usual touch events
     setTouchStart(e.targetTouches[0].clientX)
   }
   const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
@@ -53,9 +40,7 @@ export const Gallery = ({ galleryImages }) => {
     const distance = touchStart - touchEnd
     const isLeftSwipe = distance > minSwipeDistance
     const isRightSwipe = distance < -minSwipeDistance
-    // if (isLeftSwipe || isRightSwipe)
-    //   console.log('swipe', isLeftSwipe ? 'left' : 'right')
-    // add your conditional logic here
+
     if (isLeftSwipe) {
       handlePrevSlide()
     }

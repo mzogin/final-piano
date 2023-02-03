@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 // import './Carousel.css'
 import '../index.css'
+// import data from '../utils/accordionData'
 
 export const Carousel = () => {
   const data = ['Review 1', 'Review 2', 'Review 3', 'Review 4']
+
   const [currentIndex, setCurrentIndex] = useState(0)
   const carouselInfiniteScroll = () => {
     if (currentIndex === data.length - 1) {
@@ -15,7 +17,7 @@ export const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       carouselInfiniteScroll()
-    }, 7000)
+    }, 5000)
     // cleanup
     return () => clearInterval(interval)
   })
@@ -29,6 +31,7 @@ export const Carousel = () => {
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
           >
+            {/* <img src={item} alt='profile' /> */}
             <div className='testimonial'>
               <h3>{item}</h3>
               <p>

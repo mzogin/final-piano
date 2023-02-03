@@ -1,20 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.b86fff50.css",
-    "main.js": "/static/js/main.26808a01.js",
+    "main.css": "/static/css/main.2e330167.css",
+    "main.js": "/static/js/main.c7024a2e.js",
+    "static/media/music-flowers.jpg": "/static/media/music-flowers.4aeb56badd55a47d2ece.jpg",
+    "static/media/img1.jpg": "/static/media/img1.fb6cc5dbe9ac44596c10.jpg",
+    "static/media/img2.jpg": "/static/media/img2.f8acdd58a25aa44183fa.jpg",
     "static/media/background.jpg": "/static/media/background.c053caa2c8f80db18b28.jpg",
+    "static/media/blossom.jpg": "/static/media/blossom.36b33f659fb7aeb1b931.jpg",
     "static/media/logo.svg": "/static/media/logo.ea08fc8bd399300155053a810245d21e.svg",
+    "static/media/IMG_20230131_152416.jpg": "/static/media/IMG_20230131_152416.bb2daa138f7a125dcd20.jpg",
     "static/media/piano.jpg": "/static/media/piano.42bb416de0fbe2c1ecac.jpg",
+    "static/media/IMG_20230131_152356.jpg": "/static/media/IMG_20230131_152356.b9d3d29a52f7d6cd5d07.jpg",
+    "static/media/IMG_20230131_152420.jpg": "/static/media/IMG_20230131_152420.b9d3d29a52f7d6cd5d07.jpg",
+    "static/media/IMG_20230131_152403.jpg": "/static/media/IMG_20230131_152403.9c5beb4ca7aff97f7f09.jpg",
     "static/media/profile.png": "/static/media/profile.37e3a2c1f8b53971a165.png",
+    "static/media/IMG_20230131_152407.jpg": "/static/media/IMG_20230131_152407.19ce684e17a9911daa0c.jpg",
     "static/media/pic3.jpg": "/static/media/pic3.b6f8b8b2c0e4cf7f418b.jpg",
     "static/media/pic2.jpg": "/static/media/pic2.03d3a260a082f5b27901.jpg",
     "static/media/pic4.jpg": "/static/media/pic4.a419fedfb42f6a96019e.jpg",
     "index.html": "/index.html",
-    "main.b86fff50.css.map": "/static/css/main.b86fff50.css.map",
-    "main.26808a01.js.map": "/static/js/main.26808a01.js.map"
+    "main.2e330167.css.map": "/static/css/main.2e330167.css.map",
+    "main.c7024a2e.js.map": "/static/js/main.c7024a2e.js.map"
   },
   "entrypoints": [
-    "static/css/main.b86fff50.css",
-    "static/js/main.26808a01.js"
+    "static/css/main.2e330167.css",
+    "static/js/main.c7024a2e.js"
   ]
 }

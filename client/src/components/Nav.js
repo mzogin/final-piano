@@ -13,15 +13,15 @@ export const Nav = () => {
   }
 
   return (
-    // <div className='wrapper'>
-    //   <div className='outer'>
-    //     <div className='inner'>
     <nav className='navbar' id='navbar'>
       <div className='nav-center'>
         <div className='nav-header'>
-          <button onClick={handleClick} className='nav-btn' id='nav-btn'>
+          <button
+            onClick={handleClick}
+            className={`nav-btn ${showNav ? 'active-nav-btn' : ''}`}
+            id='nav-btn'
+          >
             <FaAlignJustify />
-            {/* <i className='fas fa-bars'></i> */}
           </button>
         </div>
         <ul className={`nav-items ${showNav ? 'show-items' : ''}`}>
