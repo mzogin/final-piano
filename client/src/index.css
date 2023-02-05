@@ -23,10 +23,10 @@ code {
   /* --clr-pastel-magnolia: #eae4e9; */
   --clr-pastel-magnolia: #faf4fa;
   /* --clr-pastel-magnolia: #fff8f4; */
-  --clr-pastel-lavender: hsl(224, 88%, 93%);
+  --clr-pastel-lavender: #dde6fd;
   --clr-pastel-lavender-light: #ecf1fe;
   --clr-pastel-lavender-dark: hsl(224, 92%, 90%);
-  --clr-pastel-lavender-darkest: hsl(224, 92%, 87%);
+  --clr-pastel-lavender-darkest: #bfd0fc;
   --clr-pastel-dark-blue: #94b0ff;
   --clr-pastel-blue: #9eb8ff;
   --clr-sand: #ffe8d6;
@@ -163,15 +163,6 @@ p {
 }
 
 /* BACKGROUND COLORS */
-.melon {
-  background-color: var(--clr-melon);
-}
-.apricot {
-  background-color: var(--clr-apricot);
-}
-.peach {
-  background-color: var(--clr-peach);
-}
 .linen {
   background-color: var(--clr-linen);
 }
@@ -186,7 +177,6 @@ p {
 }
 .magnolia {
   background-color: var(--clr-pastel-magnolia);
-  /* background-color: var(--clr-champagne); */
 }
 .blue {
   background-color: var(--clr-pastel-blue);
@@ -280,10 +270,27 @@ p {
   letter-spacing: var(--spacing-smaller);
 }
 
-.overview .flex-container {
+.questions-container {
+  width: 100vw;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
 
+.overview .flex-container {
+  /* ! */
+  margin-bottom: 3.5rem;
+  gap: 2rem 4rem;
+}
+/* .overview .section-text {
+  max-width: 28rem;
+  max-width: 40rem;
+} */
+.overview .extra-margin {
+  margin-bottom: 5rem;
+}
 /* 
 @media screen and (min-width: 992px) {
   .section-center {
@@ -320,7 +327,6 @@ p {
   top: 0;
   width: 100%;
   z-index: 2;
-  background: var(--clr-peach);
   background: var(--clr-pastel-lavender);
   /* background: rgba(204, 204, 204, 0.25); */
   /* background: rgba(255, 255, 255, 0.7); */
@@ -389,6 +395,8 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-content: space-around;
+  gap: 1rem;
 }
 
 /* .header-content {
@@ -429,13 +437,11 @@ p {
   transition: var(--transition);
 }
 .nav-link:hover {
-  background: var(--clr-apricot);
   background: var(--clr-pastel-lavender-dark);
   padding-left: 2.5rem;
 }
 
 .nav-link.active {
-  background: var(--clr-melon);
   background: var(--clr-pastel-lavender-darkest);
   padding-left: 2.5rem;
 }
@@ -568,7 +574,8 @@ p {
   justify-content: space-between; */
   justify-content: center;
   gap: 1rem 4rem;
-  margin-bottom: 2rem;
+  /* ! */
+  /* margin-bottom: 2rem; */
 }
 .flex-reverse {
   flex-direction: row-reverse;
@@ -599,7 +606,6 @@ p {
   height: 200px; */
   /* clip-path: ellipse(26% 51%); */
   background: white;
-  background: var(--clr-pastel-lavender);
   box-shadow: var(--dark-shadow);
   /* width: 200px;
   height: 200px; */
@@ -608,7 +614,8 @@ p {
 
 .hero-btn-container {
   text-align: center;
-  margin-top: 3rem;
+  /* !! */
+  /* margin-top: 3rem; */
   /* animation: show 1.5s linear 1; */
 }
 
@@ -659,8 +666,19 @@ p {
 }
 
 .profile-img {
-  max-width: 20rem;
-  max-width: 18rem;
+  /* max-width: 20rem; */
+  /* max-width: 18rem; */
+  max-width: 14rem;
+}
+@media screen and (min-width: 850px) {
+  .profile-img {
+    max-width: 16rem;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .profile-img {
+    max-width: 18rem;
+  }
 }
 
 .banner-img img {
@@ -728,7 +746,8 @@ p {
   background: var(--clr-fb-blue); */
 }
 .facebook-btn:hover {
-  background-color: var(--clr-fb-blue-light);
+  background-color: var(--clr-pastel-dark-blue);
+  /* background-color: var(--clr-fb-blue-light); */
 }
 .youtube-btn {
   outline-color: var(--clr-pastel-blue);
@@ -789,28 +808,40 @@ p {
 
 /* OVERVIEW SECTION */
 
-.section-center h2 {
-  /* font-family: var(--ff-cursive); */
+/* .section-center h2 {
+  font-family: var(--ff-cursive);
   font-style: italic;
-  /* font-size: 3.75rem; */
+  font-size: 3.75rem;
+} */
+
+.text-center {
+  text-align: center;
 }
 .overview ul {
   margin-left: 2rem;
 }
 .overview li {
-  list-style-type: square;
+  /* list-style-type: square; */
   padding-left: 1rem;
 }
-.overview h3 {
-  color: var(--clr-light-black);
+.overview h2 {
+  /* color: var(--clr-light-black); */
+  color: var(--clr-old-lavender-dark);
+  /* font-family: var(--ff-cursive); */
 }
-.overview p {
-  max-width: 25rem;
+.overview span {
+  display: inline-block;
 }
+.overview span::first-letter {
+  font-family: var(--ff-cursive);
+}
+/* .overview p {
+  max-width: 40rem;
+} */
 
 .section-text p {
   max-width: 30rem;
-  color: var(--clr-light-black);
+  font-size: large;
 }
 
 /* 
@@ -844,11 +875,12 @@ CONTACT
 .contact-title {
   /* color: var(--clr-p); */
   color: var(--clr-pastel-dark-blue);
+  /* color: var(--clr-old-lavender-dark); */
   font-weight: 500;
   margin-bottom: 0.25rem;
 }
 .contact-icon {
-  padding-right: 0.5rem;
+  padding-right: 1rem;
 }
 .contact-text {
   text-transform: uppercase;
@@ -985,16 +1017,14 @@ blockquote:before {
 }
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  /* color: var(--clr-light-black); */
   cursor: pointer;
-  /* padding: 18px; */
-  padding: 1rem;
+  padding: 1rem 0.5rem;
+  padding-right: 0.75rem;
   width: 100%;
   text-align: center;
   border: none;
   outline: none;
   /* transition: var(--transition); */
-
   text-transform: uppercase;
   font-size: 1.55rem;
   letter-spacing: var(--spacing-smaller);
@@ -1006,7 +1036,6 @@ blockquote:before {
   /* max-height: fit-content; */
   max-height: 500px;
   /* transition: max-height 0.2s ease; */
-
   /* transition: max-height 1s ease-in-out; */
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   /* transition: var(--transition); */
@@ -1020,6 +1049,8 @@ blockquote:before {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   letter-spacing: var(--spacing-smaller);
   overflow: hidden;
   border-bottom: 0.1rem solid var(--clr-old-lavender);
@@ -1086,7 +1117,7 @@ blockquote:before {
 }
 
 .submit-btn {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 2rem;
   display: block;
   /* color: #555; */
@@ -1309,6 +1340,69 @@ ul.images {
   user-select: none;
 }
 /* END CUSTOM GALLERY */
+
+/* IMAGE SLIDER */
+
+.image-slider {
+  display: flex;
+  /* position: relative; */
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-img {
+  width: 240px;
+  height: 172px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 300px) {
+  .slider-img {
+    width: 19.6rem;
+    height: 14rem;
+  }
+}
+
+/* @media screen and (min-width: 480px) {
+  .slider-img {
+    width: 19.6rem;
+    height: 14rem;
+  }
+} */
+
+@media screen and (min-width: 1150px) {
+  .slider-img {
+    width: 28rem;
+    height: 20rem;
+  }
+}
+.slider-slide {
+  opacity: 0.1;
+  transition-duration: 3s ease;
+
+  /* transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1); */
+}
+.active-slide {
+  opacity: 1;
+  transition-duration: 3s;
+  /* animation: fade-out 10s ease-in-out 1; */
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    /* opacity: 0; */
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 /* LOADING SPINNER */
 .spinner-container {

@@ -3,38 +3,55 @@ import { useState, useEffect } from 'react'
 
 export const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const carouselInfiniteScroll = () => {
-    if (currentIndex === slides.length - 1) {
-      return setCurrentIndex(0)
-    }
-    return setCurrentIndex(currentIndex + 1)
+
+  const nextSlide = () => {
+    setCurrentIndex(currentIndex === slides.length - 1 ? 0 : currentIndex + 1)
   }
+
+  // const carouselInfiniteScroll = () => {
+  //   if (currentIndex === slides.length - 1) {
+  //     return setCurrentIndex(0)
+  //   }
+  //   return setCurrentIndex(currentIndex + 1)
+  // }
   useEffect(() => {
     const interval = setInterval(() => {
-      carouselInfiniteScroll()
-    }, 5000)
+      // carouselInfiniteScroll()
+      nextSlide()
+    }, 10000)
     // cleanup
     return () => clearInterval(interval)
   })
-  const sliderStyles = {
-    height: '100%',
-    // position: 'relative',
-    // border: '0.1rem solid #f5b69b',
-  }
-  const slideStyles = {
-    width: '100%',
-    height: '100%',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundImage: `url(${slides[currentIndex]})`,
-    // transition: 'all 3s cubic-bezier(0, 0, 1, 1)',
-    // transition: 'all 2s ease-in-out',
-    transition: 'background-image 2s linear',
-  }
+  // const sliderStyles = {
+  //   height: '100%',
+  // }
+  // const slideStyles = {
+  //   width: '100%',
+  //   height: '100%',
+  //   backgroundPosition: 'center',
+  //   backgroundSize: 'cover',
+  //   backgroundImage: `url(${slides[currentIndex]})`,
+  // }
 
   return (
-    <div style={sliderStyles}>
-      <div style={slideStyles}></div>
-    </div>
+    <section className='image-slider'>
+      {slides.map((slide, index) => {
+        return (
+          <div
+            className={`slider-slide ${
+              index === currentIndex ? 'active-slide' : ''
+            }`}
+            key={index}
+          >
+            {index === currentIndex && (
+              <img className='slider-img' src={slide} alt='slide show'></img>
+            )}
+          </div>
+        )
+      })}
+    </section>
+    // <div style={sliderStyles}>
+    //   <div className={`image-slide`} style={slideStyles}></div>
+    // </div>
   )
 }

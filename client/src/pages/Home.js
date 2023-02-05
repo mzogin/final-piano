@@ -17,16 +17,12 @@ export const Home = () => {
     require.context('../assets/images/overview', false, /\.(png|jpe?g|svg)$/)
   )
 
-  const containerStyles = {
-    // width: '30rem',
-    width: '25rem',
-    maxWidth: '90vw',
-    // width: '500px',
-    height: '20rem',
-    // height: '400px',
-    // height: '280px',
-    margin: '0 auto',
-  }
+  // const containerStyles = {
+  //   width: '25rem',
+  //   maxWidth: '90vw',
+  //   height: '20rem',
+  //   margin: '0 auto',
+  // }
 
   return (
     <>
@@ -47,23 +43,21 @@ export const Home = () => {
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Voluptates ut eligendi et tenetur ex iure optio odio nam
-                  voluptatibus commodi, cumque doloribus unde. Unde assumenda
-                  soluta earum?
+                  voluptatibus commodi, cumque doloribus unde.
                 </p>
               </div>
             </div>
             {/* !! */}
-
-            <div className='hero-btn-container'>
-              <div className='hero-btn-text'>explore</div>
-              <div className='temp-container'>
-                <a className='hero-btn' href='#overview'>
-                  <FaArrowDown />
-                </a>
-              </div>
-            </div>
           </div>
           {/* !! */}
+        </div>
+        <div className='hero-btn-container'>
+          <div className='hero-btn-text'>explore</div>
+          <div className='temp-container'>
+            <a className='hero-btn' href='#overview'>
+              <FaArrowDown />
+            </a>
+          </div>
         </div>
       </header>
       {/* end header */}
@@ -73,10 +67,17 @@ export const Home = () => {
       <section id='overview' className='overview magnolia'>
         <div className='section-center'>
           <h1 className='section-title'>about</h1>
-          <div className='flex-container'>
-            <div className='section-text'>
+          <div className='flex-container extra-margin'>
+            <div className='text-center section-text'>
               <h2>Dr. Olga Berkovich</h2>
-              <ul>
+              <h3>
+                <span>pianist</span>, <span>organist</span>,{' '}
+                <span>composer</span>
+              </h3>
+              <h3>
+                <span>music</span> <span>teacher</span>
+              </h3>
+              {/* <ul>
                 <li>
                   <h3>Pianist</h3>
                 </li>
@@ -89,7 +90,7 @@ export const Home = () => {
                 <li>
                   <h3>Music Teacher</h3>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <article className='profile-img'>
               <div className='profile-pic-container'>
@@ -99,19 +100,17 @@ export const Home = () => {
           </div>
           <div className='flex-container flex-reverse'>
             <div className='section-text'>
-              <h2>Lorem, ipsum dolor.</h2>
+              <h2 className='text-center'>What I teach</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Commodi, sapiente modi. Deserunt magni aliquam, modi quasi
-                maxime doloribus, neque deleniti saepe non laborum minima totam
-                est! Non nihil illum quos?
+                I offer my students piano lessons, organ lessons, as well as
+                lessons in music theory and composition
               </p>
-              <p>
+              {/* <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Voluptates ut eligendi et tenetur ex iure optio odio nam
                 voluptatibus commodi, cumque doloribus unde. Unde assumenda
                 soluta earum? Facilis, reiciendis nisi.
-              </p>
+              </p> */}
             </div>
             {/* <article className='banner-img'>
               <div className='banner-pic-container'>
@@ -120,9 +119,12 @@ export const Home = () => {
               </div>
             </article> */}
             <article className='img-slider-container'>
-              <div style={containerStyles}>
+              <div>
                 <ImageSlider slides={slides} />
               </div>
+              {/* <div style={containerStyles}>
+                <ImageSlider slides={slides} />
+              </div> */}
             </article>
           </div>
         </div>
@@ -269,7 +271,7 @@ export const Home = () => {
       </section>
       {/* testimonials end */}
       <section className='questions magnolia'>
-        <div className='section-center'>
+        <div className='questions-container'>
           <h1 className='section-title'>FAQs</h1>
           <div className='accordion-container'>
             {accordionData.map((data, index) => (
