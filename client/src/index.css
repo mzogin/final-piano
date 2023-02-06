@@ -756,7 +756,8 @@ p {
   background: var(--clr-yt-red); */
 }
 .youtube-btn:hover {
-  background-color: var(--clr-yt-red-light);
+  background-color: var(--clr-pastel-dark-blue);
+  /* background-color: var(--clr-yt-red-light); */
 }
 
 .banner-img {
@@ -918,10 +919,20 @@ CONTACT
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
+  /* !! */
+  width: 240px;
+  height: 172px;
 }
+
+.img-slider-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 240px;
+  height: 172px;
+}
+
 .carousel-item {
-  /* border: 0.15rem solid #333; */
-  /* height: 20rem; */
   min-width: 100%;
   width: 100%;
   min-height: 100%;
@@ -931,15 +942,66 @@ CONTACT
   justify-content: center; */
   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
+.carousel-item img {
+  object-fit: cover;
+}
 
 /* IMAGE SLIDER */
-.img-slider-container {
+
+.image-slider {
+  display: flex;
+  /* position: relative; */
+  justify-content: center;
+  align-items: center;
+}
+.slider-img {
+  width: 240px;
+  height: 172px;
+  object-fit: cover;
+}
+@media screen and (min-width: 300px) {
+  .img-slider-container {
+    width: 19.6rem;
+    height: 14rem;
+  }
+  /* .slider-img {
+    width: 19.6rem;
+    height: 14rem;
+  } */
+}
+/* @media screen and (min-width: 480px) {
+  .slider-img {
+    width: 19.6rem;
+    height: 14rem;
+  }
+} */
+
+@media screen and (min-width: 1150px) {
+  .img-slider-container {
+    width: 28rem;
+    height: 20rem;
+  }
+  /* .slider-img {
+    width: 28rem;
+    height: 20rem;
+  } */
+}
+.slider-slide {
+  opacity: 0.1;
+  transition-duration: 3s ease;
+}
+.active-slide {
+  opacity: 1;
+  transition-duration: 3s;
+}
+
+/* IMAGE SLIDER */
+.img-slider-frame {
   background: white;
-  /* background: #444; */
-  /* background: var(--clr-melon); */
   padding: 0.5rem;
   box-shadow: var(--dark-shadow);
 }
+
 /* 
 .testimonials {
   background: #fbfefb;
@@ -1349,20 +1411,17 @@ ul.images {
   justify-content: center;
   align-items: center;
 }
-
 .slider-img {
   width: 240px;
   height: 172px;
   object-fit: cover;
 }
-
 @media screen and (min-width: 300px) {
   .slider-img {
     width: 19.6rem;
     height: 14rem;
   }
 }
-
 /* @media screen and (min-width: 480px) {
   .slider-img {
     width: 19.6rem;
@@ -1379,13 +1438,10 @@ ul.images {
 .slider-slide {
   opacity: 0.1;
   transition-duration: 3s ease;
-
-  /* transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1); */
 }
 .active-slide {
   opacity: 1;
   transition-duration: 3s;
-  /* animation: fade-out 10s ease-in-out 1; */
 }
 
 @keyframes fade-out {

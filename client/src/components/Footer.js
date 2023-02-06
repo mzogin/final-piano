@@ -9,7 +9,6 @@ export const Footer = () => {
       <h4 className='footer-text'>
         &copy; <span id='date'>{year}</span>
         <span className='company'> olga berkovich's music academy </span>
-        <br /> all rights reserved
       </h4>
     </footer>
   )

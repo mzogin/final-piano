@@ -18,7 +18,7 @@ export const ImageSlider = ({ slides }) => {
     const interval = setInterval(() => {
       // carouselInfiniteScroll()
       nextSlide()
-    }, 10000)
+    }, 7000)
     // cleanup
     return () => clearInterval(interval)
   })
@@ -34,19 +34,32 @@ export const ImageSlider = ({ slides }) => {
   // }
 
   return (
-    <section className='image-slider'>
+    <section className='img-slider-container'>
+      {/* <img
+        className='slider-img'
+        src={slides[currentIndex]}
+        alt='slide show'
+      ></img> */}
+
       {slides.map((slide, index) => {
         return (
           <div
-            className={`slider-slide ${
-              index === currentIndex ? 'active-slide' : ''
-            }`}
+            className='carousel-item'
+            style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
           >
-            {index === currentIndex && (
-              <img className='slider-img' src={slide} alt='slide show'></img>
-            )}
+            <img src={slide} alt='profile' />
           </div>
+          // <div
+          //   className={`slider-slide ${
+          //     index === currentIndex ? 'active-slide' : ''
+          //   }`}
+          //   key={index}
+          // >
+          //   {index === currentIndex && (
+          //     <img className='slider-img' src={slide} alt='slide show'></img>
+          //   )}
+          // </div>
         )
       })}
     </section>

@@ -40,11 +40,7 @@ export const Home = () => {
                 <div className='logo-container'>
                   <img src={logo} alt='logo' />
                 </div>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Voluptates ut eligendi et tenetur ex iure optio odio nam
-                  voluptatibus commodi, cumque doloribus unde.
-                </p>
+                <p>Music lessons in Nashua, New Hampshire</p>
               </div>
             </div>
             {/* !! */}
@@ -100,7 +96,7 @@ export const Home = () => {
           </div>
           <div className='flex-container flex-reverse'>
             <div className='section-text'>
-              <h2 className='text-center'>What I teach</h2>
+              <h2 className='text-center'>my school</h2>
               <p>
                 I offer my students piano lessons, organ lessons, as well as
                 lessons in music theory and composition
@@ -118,7 +114,7 @@ export const Home = () => {
                 <Carousel />
               </div>
             </article> */}
-            <article className='img-slider-container'>
+            <article className='img-slider-frame'>
               <div>
                 <ImageSlider slides={slides} />
               </div>
