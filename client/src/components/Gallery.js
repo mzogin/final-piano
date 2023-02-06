@@ -7,6 +7,7 @@ export const Gallery = ({ galleryImages }) => {
   const [openModal, setOpenModal] = useState(false)
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
+
   // the required distance between touchStart and touchEnd to be detected as a swipe
   const minSwipeDistance = 50
 
@@ -84,10 +85,12 @@ export const Gallery = ({ galleryImages }) => {
             className='close-slide'
             onClick={handleCloseModal}
           />
+
           <FaChevronLeft className='prev-slide' onClick={handlePrevSlide} />
           <FaChevronRight className='next-slide' onClick={handleNextSlide} />
           <div className='fullscreen-img'>
-            <img src={galleryImages[slideNumber].img} alt='' />
+            <img src={galleryImages[slideNumber]} alt='' />
+            {/* <img src={galleryImages[slideNumber].img} alt='' /> */}
           </div>
         </div>
       )}
@@ -100,7 +103,8 @@ export const Gallery = ({ galleryImages }) => {
                 key={index}
                 onClick={() => handleOpenModal(index)}
               >
-                <img src={slide.img} alt='' />
+                <img src={slide} alt='' />
+                {/* <img src={slide.img} alt='' /> */}
               </div>
             )
           })}

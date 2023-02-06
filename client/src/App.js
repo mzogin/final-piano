@@ -7,7 +7,7 @@ import { Awards } from './pages/Awards'
 import { Photos } from './pages/Photos'
 import { Videos } from './pages/Videos'
 import { Contact } from './pages/Contact'
-// import { Error } from './pages/Error'
+import { Error } from './pages/Error'
 
 // import components
 import { Nav } from './components/Nav'
@@ -24,7 +24,7 @@ function App() {
         <Route path='photos' element={<Photos />} />
         <Route path='videos' element={<Videos />} />
         <Route path='contact' element={<Contact />} />
-        {/* <Route path='*' element={<Error />} /> */}
+        <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
   )
