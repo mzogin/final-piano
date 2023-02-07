@@ -2,14 +2,15 @@ const express = require('express')
 // const router = express.Router()
 const path = require('path')
 const cors = require('cors')
+require('dotenv').config()
 const nodemailer = require('nodemailer')
 // const { dirname } = require('path')
 // const { fileURLToPath } = require('url')
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
+// const PORT = process.env.PORT || 5000
 
 const app = express()
-require('dotenv').config()
 
 app.use(cors())
 app.use(express.json())
@@ -27,18 +28,32 @@ app.use(express.static(path.resolve(__dirname, './client/build')))
 // app.use('/', router)
 
 // NEW
-let transporter = nodemailer.createTransport({
+
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    type: 'OAuth2',
     user: process.env.EMAIL,
-    pass: process.env.WORD,
-    clientId: process.env.OAUTH_CLIENTID,
-    clientSecret: process.env.OAUTH_CLIENT_SECRET,
-    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+    pass: process.env.PASS,
   },
 })
 
+// let transporter = nodemailer.createTransport({
+// auth: {
+//   type: 'OAuth2',
+//   user: process.env.EMAIL,
+//   pass: process.env.WORD,
+//   clientId: process.env.OAUTH_CLIENTID,
+//   clientSecret: process.env.OAUTH_CLIENT_SECRET,
+//   refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+// },
+// !
+// auth: {
+//   user: 'mdzogin@gmail.com',
+//   pass: 'ybepcuwgpmkzunhu',
+// },
+// })
+
+// !old
 transporter.verify((err, success) => {
   err
     ? console.log(err)
@@ -55,19 +70,9 @@ app.post('/send', function (req, res) {
     to: process.env.EMAIL,
     subject: `Message from: ${name}`,
     text: `${message}`,
-    // from: `${req.body.mailerState.email}`,
-    // to: process.env.EMAIL,
-    // subject: `Message from: ${req.body.mailerState.email}`,
-    // text: `${req.body.mailerState.message}`,
   }
 
-  // let mailOptions = {
-  //   from: 'test@gmail.com',
-  //   to: process.env.EMAIL,
-  //   subject: 'Nodemailer API',
-  //   text: 'Hi from your nodemailer API',
-  // }
-
+  //!old
   transporter.sendMail(mailOptions, function (err, data) {
     if (err) {
       res.json({
@@ -97,23 +102,6 @@ app.post('/send', function (req, res) {
 
 // app.listen(PORT, () => console.log(`Server Running on port ${PORT}`))
 
-// ???
-// const contactEmail = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'mdzogin@gmail.com',
-//     pass: 'ybepcuwgpmkzunhu',
-//   },
-// })
-
-// contactEmail.verify((error) => {
-//   if (error) {
-//     console.log(error)
-//   } else {
-//     console.log('Ready to Send')
-//   }
-// })
-
 // /contact
 // ???
 // router.post('/message', (req, res) => {
@@ -142,8 +130,6 @@ app.post('/send', function (req, res) {
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
 })
-
-// app.listen(PORT, () => console.log(`Server Running on port ${PORT}`))
 
 const start = async () => {
   try {

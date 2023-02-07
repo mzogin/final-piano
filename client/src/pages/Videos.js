@@ -39,9 +39,9 @@ export const Videos = () => {
             href='https://www.youtube.com/channel/UCzb3-4iGZDOQooVYAcYsZdg'
             target='_blank'
             rel='noreferrer'
-            className='btn banner-btn youtube-btn'
+            className='btn'
+            // className='btn banner-btn youtube-btn'
           >
-            {/* <i className='fa-brands fa-youtube'></i> */}
             <FaYoutube style={{ marginRight: '1rem' }} />
             youtube
           </a>

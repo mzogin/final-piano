@@ -67,11 +67,13 @@ export const Home = () => {
             <div className='text-center section-text'>
               <h2>Dr. Olga Berkovich</h2>
               <h3>
-                <span>pianist</span>, <span>organist</span>,{' '}
+                <span>pianist,&nbsp;</span>
+                <span>organist,&nbsp;</span>
                 <span>composer</span>
               </h3>
               <h3>
-                <span>music</span> <span>teacher</span>
+                <span>music&nbsp;</span>
+                <span>teacher</span>
               </h3>
               {/* <ul>
                 <li>

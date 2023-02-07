@@ -227,16 +227,39 @@ p {
   border: none;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  outline: 0.125rem solid var(--clr-pastel-blue);
+  outline-offset: 0.25rem;
+  outline-color: var(--clr-pastel-blue);
+  background: var(--clr-pastel-blue);
+
+  font-size: 1.1rem;
+  padding: 0.4rem 1.25rem;
+  transition: var(--transition);
 }
+
+.btn:hover {
+  background-color: var(--clr-pastel-dark-blue);
+  outline-color: var(--clr-pastel-dark-blue);
+}
+/* 
+.facebook-btn {
+  outline-color: var(--clr-pastel-blue);
+  background: var(--clr-pastel-blue);
+}
+.facebook-btn:hover {
+  background-color: var(--clr-pastel-dark-blue);
+}
+.youtube-btn {
+  outline-color: var(--clr-pastel-blue);
+  background: var(--clr-pastel-blue);
+}
+.youtube-btn:hover {
+  background-color: var(--clr-pastel-dark-blue);
+} */
 
 .btn i {
   padding-right: 0.5rem;
 }
-
-/* .btn:hover {
-  color: var(--clr-primary);
-  background: var(--clr-primary-light);
-} */
 
 /* clearfix hack */
 /* .clearfix::after,
@@ -726,9 +749,10 @@ p {
 }
 
 .banner-btn {
-  outline: 0.125rem solid #333;
+  /* outline: 0.125rem solid #333;
   background: #333;
-  outline-offset: 0.25rem;
+  outline-offset: 0.25rem; */
+
   /* font-size: 1.25rem; */
   /* font-size: 1.2rem; */
   font-size: 1.1rem;
@@ -737,27 +761,6 @@ p {
   /* padding: 0.5rem 1.5rem; */
   padding: 0.4rem 1.25rem;
   /* animation: show 4s linear 1; */
-}
-
-.facebook-btn {
-  outline-color: var(--clr-pastel-blue);
-  background: var(--clr-pastel-blue);
-  /* outline-color: var(--clr-fb-blue);
-  background: var(--clr-fb-blue); */
-}
-.facebook-btn:hover {
-  background-color: var(--clr-pastel-dark-blue);
-  /* background-color: var(--clr-fb-blue-light); */
-}
-.youtube-btn {
-  outline-color: var(--clr-pastel-blue);
-  background: var(--clr-pastel-blue);
-  /* outline-color: var(--clr-yt-red);
-  background: var(--clr-yt-red); */
-}
-.youtube-btn:hover {
-  background-color: var(--clr-pastel-dark-blue);
-  /* background-color: var(--clr-yt-red-light); */
 }
 
 .banner-img {
@@ -1182,16 +1185,11 @@ blockquote:before {
   font-size: 1rem;
   margin-top: 2rem;
   display: block;
-  /* color: #555; */
-  color: var(--clr-old-lavender);
+  /* color: var(--clr-old-lavender); */
   color: white;
   width: 100%;
   padding: 0.85rem 1rem;
-  outline: 0.125rem solid var(--clr-pastel-blue);
-  /* background: var(--clr-pastel-lavender-darkest); */
-  background: var(--clr-pastel-blue);
-  outline-offset: 0.25rem;
-  transition: var(--transition);
+  /* transition: var(--transition); */
 }
 
 .submit-btn:hover {

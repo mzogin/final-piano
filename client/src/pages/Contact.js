@@ -47,7 +47,8 @@ export const Contact = () => {
                   href='https://www.facebook.com/oglayas1/'
                   target='_blank'
                   rel='noreferrer'
-                  className='btn banner-btn facebook-btn'
+                  className='btn facebook-btn'
+                  // className='btn banner-btn facebook-btn'
                 >
                   <FaFacebook style={{ marginRight: '1rem' }} />
                   facebook
