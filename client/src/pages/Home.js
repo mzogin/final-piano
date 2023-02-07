@@ -1,6 +1,6 @@
 import React from 'react'
 
-import image from '../assets/images/profile.png'
+import image from '../assets/images/profile/img.jpg'
 // import image1 from '../assets/images/overview/img1.jpg'
 import logo from '../assets/images/logo/logo.svg'
 
@@ -67,12 +67,12 @@ export const Home = () => {
             <div className='text-center section-text'>
               <h2>Dr. Olga Berkovich</h2>
               <h3>
-                <span>pianist,&nbsp;</span>
-                <span>organist,&nbsp;</span>
+                <span>pianist,&nbsp;&nbsp;</span>
+                <span>organist,&nbsp;&nbsp;</span>
                 <span>composer</span>
               </h3>
               <h3>
-                <span>music&nbsp;</span>
+                <span>music&nbsp;&nbsp;</span>
                 <span>teacher</span>
               </h3>
               {/* <ul>
@@ -98,17 +98,11 @@ export const Home = () => {
           </div>
           <div className='flex-container flex-reverse'>
             <div className='section-text'>
-              <h2 className='text-center'>my school</h2>
+              <h2 className='text-center'>music lessons</h2>
               <p>
                 I offer my students piano lessons, organ lessons, as well as
                 lessons in music theory and composition
               </p>
-              {/* <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptates ut eligendi et tenetur ex iure optio odio nam
-                voluptatibus commodi, cumque doloribus unde. Unde assumenda
-                soluta earum? Facilis, reiciendis nisi.
-              </p> */}
             </div>
             {/* <article className='banner-img'>
               <div className='banner-pic-container'>

@@ -23,6 +23,7 @@ code {
   /* --clr-pastel-magnolia: #eae4e9; */
   --clr-pastel-magnolia: #faf4fa;
   /* --clr-pastel-magnolia: #fff8f4; */
+  --clr-pastel-ghost-white: #f4f7ff;
   --clr-pastel-lavender: #dde6fd;
   --clr-pastel-lavender-light: #ecf1fe;
   --clr-pastel-lavender-dark: hsl(224, 92%, 90%);
@@ -177,6 +178,7 @@ p {
 }
 .magnolia {
   background-color: var(--clr-pastel-magnolia);
+  background-color: var(--clr-pastel-ghost-white);
 }
 .blue {
   background-color: var(--clr-pastel-blue);
@@ -1160,7 +1162,7 @@ blockquote:before {
   padding: 0.75rem 1rem;
   border: none;
   margin-bottom: 1.25rem;
-  border-bottom: 0.1rem solid var(--clr-light-black);
+  border-bottom: 0.1rem solid var(--clr-old-lavender);
   letter-spacing: var(--spacing-smaller);
   box-shadow: var(--dark-shadow);
   transition: var(--transition);
