@@ -1,5 +1,4 @@
 const express = require('express')
-// const router = express.Router()
 const path = require('path')
 const cors = require('cors')
 require('dotenv').config()
@@ -20,15 +19,6 @@ app.use(express.json())
 //serve the frontend
 app.use(express.static(path.resolve(__dirname, './client/build')))
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-// })
-
-// ??
-// app.use('/', router)
-
-// NEW
-
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -37,23 +27,6 @@ const transporter = nodemailer.createTransport({
   },
 })
 
-// let transporter = nodemailer.createTransport({
-// auth: {
-//   type: 'OAuth2',
-//   user: process.env.EMAIL,
-//   pass: process.env.WORD,
-//   clientId: process.env.OAUTH_CLIENTID,
-//   clientSecret: process.env.OAUTH_CLIENT_SECRET,
-//   refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-// },
-// !
-// auth: {
-//   user: 'mdzogin@gmail.com',
-//   pass: 'ybepcuwgpmkzunhu',
-// },
-// })
-
-// !old
 transporter.verify((err, success) => {
   err
     ? console.log(err)
@@ -86,47 +59,11 @@ app.post('/send', function (req, res) {
     }
   })
 })
-// END NEW
-
-// serve up production assets
-// app.use(express.static('client/build'))
-
-// let the react app to handle any unknown routes
-// serve up the index.html if express does'nt recognize the route
-// const path = require('path')
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-// })
-
-//
-
-// app.listen(PORT, () => console.log(`Server Running on port ${PORT}`))
-
-// /contact
-// ???
-// router.post('/message', (req, res) => {
-//   const name = req.body.name
-//   const email = req.body.email
-//   const message = req.body.message
-//   const mail = {
-//     from: name,
-//     to: 'mdzogin@gmail.com',
-//     subject: 'Contact Form Submission',
-//     html: `<p>Name: ${name}</p>
-//            <p>Email: ${email}</p>
-//            <p>Message: ${message}</p>`,
-//   }
-//   contactEmail.sendMail(mail, (error) => {
-//     if (error) {
-//       res.json({ status: 'ERROR' })
-//     } else {
-//       res.json({ status: 'Message Sent' })
-//     }
-//   })
-// })
 
 // !!!
 // only when ready to deploy
+// let the react app handle any unknown routes
+// serve up the index.html if express doesn't recognize the route
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
 })
