@@ -8,7 +8,7 @@ const Wrapper = styled.div`
     justify-content: center;
   }
 
-  @media (max-width: 613px) {
+  @media screen and (max-width: 613px) {
     .gallery-wrapper {
       grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
@@ -17,6 +17,8 @@ const Wrapper = styled.div`
     cursor: pointer;
     position: relative;
     padding-top: 66%;
+    padding-top: 90%;
+    aspect-ration: 1;
   }
   .gallery-wrapper .single-gallery-img img {
     transition: var(--transition);
