@@ -1,3 +1,4 @@
+import Wrapper from '../assets/wrappers/Gallery'
 import React from 'react'
 import { useState, useEffect, useCallback } from 'react'
 import { FaChevronRight, FaChevronLeft, FaRegWindowClose } from 'react-icons/fa'
@@ -73,7 +74,8 @@ export const Gallery = ({ galleryImages }) => {
   }, [openModal, slideNumber, handleNextSlide, handlePrevSlide])
 
   return (
-    <div>
+    <Wrapper>
+      {/* <div> */}
       {openModal && (
         <div
           className='slide-wrapper'
@@ -109,6 +111,7 @@ export const Gallery = ({ galleryImages }) => {
             )
           })}
       </div>
-    </div>
+      {/* </div> */}
+    </Wrapper>
   )
 }

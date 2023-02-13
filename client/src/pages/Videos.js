@@ -1,3 +1,4 @@
+import VideosWrapper from '../assets/wrappers/Videos'
 import React from 'react'
 // import { useGlobalContext } from '../context'
 import { FaYoutube } from 'react-icons/fa'
@@ -46,11 +47,13 @@ export const Videos = () => {
             youtube
           </a>
         </div>
-        <div className='videos-grid'>
+        <VideosWrapper>
+          {/* <div className='videos-grid'> */}
           {urls.map((url, index) => {
             return <SingleVideo url={url} key={index} />
           })}
-        </div>
+          {/* </div> */}
+        </VideosWrapper>
       </div>
     </section>
   )

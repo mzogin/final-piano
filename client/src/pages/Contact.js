@@ -1,3 +1,4 @@
+import Wrapper from '../assets/wrappers/Contact'
 import React from 'react'
 import { FaLocationArrow } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
@@ -7,7 +8,8 @@ import { FaEnvelope } from 'react-icons/fa'
 
 export const Contact = () => {
   return (
-    <section className='contact-section'>
+    // <section className='contact-section'>
+    <Wrapper>
       <div className='section-center initial-section'>
         <div className='card-container'>
           <div className='card-column'>
@@ -62,6 +64,7 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Wrapper>
+    // </section>
   )
 }

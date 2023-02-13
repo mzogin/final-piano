@@ -1,3 +1,4 @@
+import Wrapper from '../assets/wrappers/Nav'
 import React from 'react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
@@ -13,7 +14,8 @@ export const Nav = () => {
   }
 
   return (
-    <nav className='navbar' id='navbar'>
+    // <nav className='navbar' id='navbar'>
+    <Wrapper>
       <div className='nav-center'>
         <div className='nav-header'>
           <button
@@ -86,6 +88,7 @@ export const Nav = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </Wrapper>
+    // </nav>
   )
 }

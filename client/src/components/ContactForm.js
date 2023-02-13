@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { Popup } from './Popup'
 
 const ContactForm = () => {
   const [status, setStatus] = useState('Submit')
+  const [showPopup, setShowPopup] = useState(false)
+  const [resultStatus, setResultStatus] = useState('')
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('Sending...')
@@ -14,8 +17,8 @@ const ContactForm = () => {
     // /contact
     // message
     // !! for deployment
-    // let response = await fetch('http://localhost:5000/send', {
-    let response = await fetch('./send', {
+    let response = await fetch('http://localhost:5000/send', {
+      // let response = await fetch('./send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -24,11 +27,15 @@ const ContactForm = () => {
     })
     setStatus('Submit')
     let result = await response.json()
-    alert(result.status)
+    // !handle popup here
+    setShowPopup(true)
+    setResultStatus(result.status)
+    console.log(typeof result.status)
+    // alert(result.status)
   }
   return (
     <article className='contact-form'>
-      <h3>send a message</h3>
+      <h3>send me a message</h3>
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
           {/* INPUTS */}
@@ -64,6 +71,22 @@ const ContactForm = () => {
           </button>
         </div>
       </form>
+      <Popup trigger={showPopup} setTrigger={setShowPopup}>
+        {resultStatus === 'success' ? (
+          <div>
+            <h2>Thank you</h2>
+            <p>your message has been received</p>
+          </div>
+        ) : (
+          <div>
+            <h3>oops... something went wrong</h3>
+            <p>
+              sorry, your message failed to send. Please take a look at my
+              contact page for all my contact information. Thank you
+            </p>
+          </div>
+        )}
+      </Popup>
     </article>
   )
 }
