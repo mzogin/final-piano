@@ -74,8 +74,8 @@ const ContactForm = () => {
       <Popup trigger={showPopup} setTrigger={setShowPopup}>
         {resultStatus === 'success' ? (
           <div>
-            <h2>Thank you</h2>
-            <p>your message has been received</p>
+            <h3>Thank you</h3>
+            <p>your message has been sent, I will get back to you shortly</p>
           </div>
         ) : (
           <div>
