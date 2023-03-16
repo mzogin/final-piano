@@ -59,7 +59,6 @@ export const Home = () => {
       {/* end header */}
 
       {/* OVERVIEW BEGIN */}
-      {/* section-pink */}
       <section id='overview' className='overview magnolia'>
         <div className='section-center'>
           <h1 className='section-title'>about</h1>
@@ -75,20 +74,6 @@ export const Home = () => {
                 <span>music&nbsp;&nbsp;</span>
                 <span>teacher</span>
               </h3>
-              {/* <ul>
-                <li>
-                  <h3>Pianist</h3>
-                </li>
-                <li>
-                  <h3>Organist</h3>
-                </li>
-                <li>
-                  <h3>Composer</h3>
-                </li>
-                <li>
-                  <h3>Music Teacher</h3>
-                </li>
-              </ul> */}
             </div>
             <article className='profile-img'>
               <div className='profile-pic-container'>
@@ -124,7 +109,6 @@ export const Home = () => {
       {/* OVERVIEW END */}
 
       {/* {testimonials start} */}
-      {/* testimonials */}
       <section className='light-lavender'>
         <div style={{ paddingTop: '3rem' }}>
           <h1 className='section-title'>Testimonials</h1>
